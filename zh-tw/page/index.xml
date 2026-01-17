@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Domin1c的博客</title>
+        <link>https://domin1c86.github.io/zh-tw/page/</link>
+        <description>Recent content in Pages on Domin1c的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Domin1c-岳昊达</copyright>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://domin1c86.github.io/zh-tw/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>合集</title>
+        <link>https://domin1c86.github.io/zh-tw/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://domin1c86.github.io/zh-tw/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>相關連結</title>
+        <link>https://domin1c86.github.io/zh-tw/%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://domin1c86.github.io/zh-tw/%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>搜尋</title>
+        <link>https://domin1c86.github.io/zh-tw/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://domin1c86.github.io/zh-tw/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>關於</title>
+        <link>https://domin1c86.github.io/zh-tw/%E9%97%9C%E6%96%BC/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://domin1c86.github.io/zh-tw/%E9%97%9C%E6%96%BC/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

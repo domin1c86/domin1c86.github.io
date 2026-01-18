@@ -7,7 +7,16 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Domin1c - 岳昊达</copyright>
-        <lastBuildDate>Sun, 18 Jan 2026 04:07:16 +0800</lastBuildDate><atom:link href="https://domin1c86.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Jan 2026 15:24:04 +0800</lastBuildDate><atom:link href="https://domin1c86.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Comment_test</title>
+        <link>https://domin1c86.github.io/p/comment_test/</link>
+        <pubDate>Sun, 18 Jan 2026 15:24:04 +0800</pubDate>
+        
+        <guid>https://domin1c86.github.io/p/comment_test/</guid>
+        <description>&lt;h2 id=&#34;评论测试-哈基米&#34;&gt;评论测试 哈基米
+&lt;/h2&gt;</description>
+        </item>
+        <item>
         <title>Auto_deployment_test</title>
         <link>https://domin1c86.github.io/p/auto_deployment_test/</link>
         <pubDate>Sun, 18 Jan 2026 04:07:16 +0800</pubDate>
@@ -15,14 +24,6 @@
         <guid>https://domin1c86.github.io/p/auto_deployment_test/</guid>
         <description>&lt;h2 id=&#34;自动部署测试&#34;&gt;自动部署测试
 &lt;/h2&gt;</description>
-        </item>
-        <item>
-        <title>MyNewBlog</title>
-        <link>https://domin1c86.github.io/p/mynewblog/</link>
-        <pubDate>Fri, 16 Jan 2026 16:03:38 +0800</pubDate>
-        
-        <guid>https://domin1c86.github.io/p/mynewblog/</guid>
-        <description></description>
         </item>
         <item>
         <title>Chinese Test</title>

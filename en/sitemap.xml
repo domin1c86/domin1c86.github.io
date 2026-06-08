@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -6,7 +7,12 @@
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/"
                 />
     <xhtml:link
@@ -14,17 +20,17 @@
                 hreflang="zh-tw"
                 href="https://domin1c86.github.io/zh-tw/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/"
-                />
   </url><url>
     <loc>https://domin1c86.github.io/en/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/archives/"
                 />
     <xhtml:link
@@ -32,14 +38,14 @@
                 hreflang="zh-tw"
                 href="https://domin1c86.github.io/zh-tw/archives/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/archives/"
-                />
   </url><url>
     <loc>https://domin1c86.github.io/en/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/page/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -47,20 +53,20 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/page/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/page/"
                 />
   </url><url>
     <loc>https://domin1c86.github.io/en/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/%E5%85%B3%E4%BA%8E/"
                 />
     <xhtml:link
@@ -68,17 +74,12 @@
                 hreflang="zh-tw"
                 href="https://domin1c86.github.io/zh-tw/%E9%97%9C%E6%96%BC/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/about/"
-                />
   </url><url>
     <loc>https://domin1c86.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://domin1c86.github.io/categories/"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -87,14 +88,19 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/categories/"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/categories/"
                 />
   </url><url>
     <loc>https://domin1c86.github.io/en/links/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/links/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/"
                 />
     <xhtml:link
@@ -102,13 +108,13 @@
                 hreflang="zh-tw"
                 href="https://domin1c86.github.io/zh-tw/%E7%9B%B8%E9%97%9C%E9%80%A3%E7%B5%90/"
                 />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://domin1c86.github.io/en/links/"
+                href="https://domin1c86.github.io/en/search/"
                 />
-  </url><url>
-    <loc>https://domin1c86.github.io/en/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -116,30 +122,25 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/search/"
                 />
   </url><url>
     <loc>https://domin1c86.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://domin1c86.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://domin1c86.github.io/zh-tw/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/tags/"
                 />
   </url>
 </urlset>

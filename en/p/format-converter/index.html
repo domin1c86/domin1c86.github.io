@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="FormatConv: A Local Format Conversion Tool for Windows When organizing materials, processing videos, compressing images, or converting audio formats daily, we often encounter a problem: tools are too heavy, rely on online services, batch processing is troublesome, or require manual configuration of external tools like FFmpeg and ImageMagick.\nFormatConv is a local format conversion software for Windows, primarily used for batch format conversion of videos, audio, and images, as well as the separation and merging of video and audio streams. It uses Flutter for the desktop interface, Go for the local conversion scheduling, and comes bundled with FFmpeg and ImageMagick in the beta version, so users don&rsquo;t need to install additional command-line tools.\n">
+<title>Format Converter</title>
+
+<link rel='canonical' href='https://domin1c86.github.io/en/p/format-converter/'>
+
+<link rel="stylesheet" href="/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css"><meta property='og:title' content="Format Converter">
+<meta property='og:description' content="FormatConv: A Local Format Conversion Tool for Windows When organizing materials, processing videos, compressing images, or converting audio formats daily, we often encounter a problem: tools are too heavy, rely on online services, batch processing is troublesome, or require manual configuration of external tools like FFmpeg and ImageMagick.\nFormatConv is a local format conversion software for Windows, primarily used for batch format conversion of videos, audio, and images, as well as the separation and merging of video and audio streams. It uses Flutter for the desktop interface, Go for the local conversion scheduling, and comes bundled with FFmpeg and ImageMagick in the beta version, so users don&rsquo;t need to install additional command-line tools.\n">
+<meta property='og:url' content='https://domin1c86.github.io/en/p/format-converter/'>
+<meta property='og:site_name' content='Domin1c&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Format Conversion' /><meta property='article:tag' content='Windows' /><meta property='article:tag' content='Flutter' /><meta property='article:tag' content='FFmpeg' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2026-06-16T22:46:38&#43;08:00'/><meta property='article:modified_time' content='2026-06-19T00:00:00&#43;08:00'/>
+<meta name="twitter:title" content="Format Converter">
+<meta name="twitter:description" content="FormatConv: A Local Format Conversion Tool for Windows When organizing materials, processing videos, compressing images, or converting audio formats daily, we often encounter a problem: tools are too heavy, rely on online services, batch processing is troublesome, or require manual configuration of external tools like FFmpeg and ImageMagick.\nFormatConv is a local format conversion software for Windows, primarily used for batch format conversion of videos, audio, and images, as well as the separation and merging of video and audio streams. It uses Flutter for the desktop interface, Go for the local conversion scheduling, and comes bundled with FFmpeg and ImageMagick in the beta version, so users don&rsquo;t need to install additional command-line tools.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/en/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_3e8e6ef57a75445.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🎯</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/en">Domin1c&#39;s Blog</a></h1>
+            <h2 class="site-description">Always raining, always fighting.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/298766622'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/domin1c'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1780860294003" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5455" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M819.2 119.466667A85.333333 85.333333 0 0 1 904.533333 204.8v614.4a85.333333 85.333333 0 0 1-85.333333 85.333333H204.8A85.333333 85.333333 0 0 1 119.466667 819.2V204.8A85.333333 85.333333 0 0 1 204.8 119.466667h614.4zM204.8 68.266667a136.533333 136.533333 0 0 0-136.533333 136.533333v614.4a136.533333 136.533333 0 0 0 136.533333 136.533333h614.4a136.533333 136.533333 0 0 0 136.533333-136.533333V204.8a136.533333 136.533333 0 0 0-136.533333-136.533333H204.8z" p-id="5456" fill="#707070"></path><path d="M215.04 409.6A194.56 194.56 0 0 1 409.6 215.04h368.64a30.72 30.72 0 0 1 30.72 30.72v88.746667a30.72 30.72 0 0 1-30.72 30.72H443.733333a78.506667 78.506667 0 0 0-78.506666 78.506666v215.04h232.106666a44.373333 44.373333 0 0 0 44.373334-44.373333v-27.306667h-174.08a30.72 30.72 0 0 1-30.72-30.72v-88.746666a30.72 30.72 0 0 1 30.72-30.72h310.613333a30.72 30.72 0 0 1 30.72 30.72V614.4a194.56 194.56 0 0 1-194.56 194.56H245.76a30.72 30.72 0 0 1-30.72-30.72V409.6zM409.6 262.826667A146.773333 146.773333 0 0 0 262.826667 409.6v351.573333H614.4a146.773333 146.773333 0 0 0 146.773333-146.773333v-129.706667h-276.48v54.613334h174.08a30.72 30.72 0 0 1 30.72 30.72V614.4a92.16 92.16 0 0 1-92.16 92.16h-249.173333a30.72 30.72 0 0 1-30.72-30.72V443.733333A126.293333 126.293333 0 0 1 443.733333 317.44h317.44V262.826667H409.6z" p-id="5457" fill="#707070"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/domin1c86'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/en/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://domin1c86.github.io/en/" selected>English</option>
+                                
+                                    <option value="https://domin1c86.github.io/" >简体中文</option>
+                                
+                                    <option value="https://domin1c86.github.io/zh-tw/" >正體中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#download-links">Download Links</a></li>
+    <li><a href="#core-features">Core Features</a></li>
+    <li><a href="#local-conversion-independent-of-online-services">Local Conversion, Independent of Online Services</a></li>
+    <li><a href="#adding-files">Adding Files</a></li>
+    <li><a href="#choosing-output-formats">Choosing Output Formats</a></li>
+    <li><a href="#conversion-parameter-settings">Conversion Parameter Settings</a></li>
+    <li><a href="#remuxing-re-encoding-and-gpu-acceleration">Remuxing, Re-encoding, and GPU Acceleration</a></li>
+    <li><a href="#audiovideo-separation">Audio/Video Separation</a></li>
+    <li><a href="#audiovideo-merging">Audio/Video Merging</a></li>
+    <li><a href="#conversion-progress-display">Conversion Progress Display</a></li>
+    <li><a href="#viewing-results-and-history">Viewing Results and History</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#output-naming-rules">Output Naming Rules</a></li>
+    <li><a href="#suitable-use-cases">Suitable Use Cases</a></li>
+    <li><a href="#installation-and-usage">Installation and Usage</a></li>
+    <li><a href="#technical-implementation">Technical Implementation</a></li>
+    <li><a href="#third-party-component-description">Third-Party Component Description</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/en/categories/my-software/" >
+                My Software
+            </a>
+        
+            <a href="/en/categories/daily-tools/" >
+                Daily Tools
+            </a>
+        
+            <a href="/en/categories/follow-me-please/" >
+                Follow Me Please😭
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/en/p/format-converter/">Format Converter</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-06-16T22:46:38&#43;08:00'>Jun 16, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    11 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://domin1c86.github.io/p/format-converter/" class="link">简体中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="formatconv-a-local-format-conversion-tool-for-windows">FormatConv: A Local Format Conversion Tool for Windows
+</h1><p>When organizing materials, processing videos, compressing images, or converting audio formats daily, we often encounter a problem: tools are too heavy, rely on online services, batch processing is troublesome, or require manual configuration of external tools like FFmpeg and ImageMagick.</p>
+<p>FormatConv is a local format conversion software for Windows, primarily used for batch format conversion of videos, audio, and images, as well as the separation and merging of video and audio streams. It uses Flutter for the desktop interface, Go for the local conversion scheduling, and comes bundled with FFmpeg and ImageMagick in the beta version, so users don&rsquo;t need to install additional command-line tools.</p>
+<p><video src="./formatconv-main.mp4" width="720" height="480" controls="controls"></video></p>
+<h2 id="download-links">Download Links
+</h2><p>Click the link below to download the latest version:<br>
+<a class="link" href="https://github.com/domin1c86/formatConv/releases"  target="_blank" rel="noopener"
+    >FormatConv Download Link - GitHub</a></p>
+<p>If the above link cannot be opened, please choose from the following:<br>
+<a class="link" href="https://gitee.com/domin1c/format-conv/releases"  target="_blank" rel="noopener"
+    >FormatConv Download Link - Gitee</a><br>
+<a class="link" href="https://pan.baidu.com/s/1epKxhbuQC58n3FIucoYJqA?pwd=hjwq"  target="_blank" rel="noopener"
+    >FormatConv Download Link - Baidu Netdisk</a><br>
+For split compression, you need to download all the files and then decompress the file ending with &ldquo;.001&rdquo; to install normally.</p>
+<h2 id="core-features">Core Features
+</h2><p>FormatConv currently supports local conversion of three types of files and one type of media stream operation:</p>
+<ul>
+<li>Video: such as MP4, MKV, MOV, AVI, GIF, etc.</li>
+<li>Audio: such as MP3, FLAC, WAV, AAC, etc.</li>
+<li>Image: such as PNG, JPEG, JPG, WEBP, BMP, TIFF, GIF, etc.</li>
+<li>Separate/Merge: Extract video or audio streams from video, and merge a video with an external audio file.</li>
+</ul>
+<p>The software supports drag-and-drop file addition, batch selection, image and video preview, task cancellation, conversion history, opening output files with default applications, as well as bilingual support (Chinese/English) and Light/Dark themes.</p>
+<h2 id="local-conversion-independent-of-online-services">Local Conversion, Independent of Online Services
+</h2><p>The conversion process of FormatConv is completed locally, with no need to upload files to a server. For video and audio, the software calls the bundled FFmpeg; for images, it calls the bundled ImageMagick.</p>
+<p>This means:</p>
+<ul>
+<li>Large files don&rsquo;t require upload waiting time</li>
+<li>Materials are processed only locally</li>
+<li>Can be used without an internet connection</li>
+<li>Batch conversion is more stable</li>
+</ul>
+<p>Note that FFmpeg and ImageMagick are third-party components with their own independent licenses. The source code of FormatConv itself uses the MIT license, but the third-party tools included in the installation package are not covered by FormatConv&rsquo;s MIT authorization.</p>
+<h2 id="adding-files">Adding Files
+</h2><p>After opening the software, the left side is the file workspace. You can add files in two ways:</p>
+<ol>
+<li>Click the &ldquo;Add Files&rdquo; area to select local files.</li>
+<li>Drag and drop files directly from File Explorer to the &ldquo;Add Files&rdquo; or &ldquo;Added Files&rdquo; area.</li>
+</ol>
+<p>Added files will be displayed in the &ldquo;Added Files&rdquo; area. The software automatically identifies file types and filters them by &ldquo;All, Video, Audio, Image.&rdquo; Image cards show thumbnails, and video cards attempt to capture a frame as a preview; a preview failure will simply fall back to a type icon and does not affect conversion.</p>
+<p>File cards support multi-selection. Click a card to select or deselect it; clicking in an empty area of the file section cancels all selections. Selected files can be dragged together to the format cards on the right for conversion; when hovering over a card, you can also use the delete button in the top right corner to remove the file from the workspace.</p>
+<p>Files that have already been processed will not disappear immediately; instead, they move to the end of the list with a green status indicator, making it easy to continue processing other formats.</p>
+<p><video src="./file-cards.mp4" width="720" height="480" controls="controls"></video></p>
+<h2 id="choosing-output-formats">Choosing Output Formats
+</h2><p>The right side is the format selection area. Formats are grouped by video, audio, and image, with each format card representing a target format.</p>
+<p>The usage is straightforward:</p>
+<ul>
+<li>Click the right arrow on a format card: Convert the currently selected matching files.</li>
+<li>Drag a file card to a format card: Convert the dragged file.</li>
+<li>Drag after multi-selection: Batch convert the selected matching files.</li>
+</ul>
+<p>The format name and empty areas of the card will not start a task, reducing accidental operations. The right arrow and settings button have independent hover effects, and only the right arrow is responsible for executing the conversion.</p>
+<p>If the file type does not match, the software will automatically refuse the conversion. For example, audio files cannot be dragged onto video formats. GIF and video formats support mutual conversion, which is an exception rule.</p>
+<p><video src="./convert-by-drag.mp4" width="720" height="480" controls="controls"></video></p>
+<h2 id="conversion-parameter-settings">Conversion Parameter Settings
+</h2><p>Each format card has a settings button on the right. Clicking it allows you to adjust conversion parameters for that format.</p>
+<p>Settings vary slightly by type:</p>
+<ul>
+<li>Audio: Compression rate, audio bitrate, sample rate, number of channels.</li>
+<li>Image: Compression rate, size ratio, color space, whether to keep metadata.</li>
+<li>Video: Separately control whether video and audio streams are forced to re-encode, and set encoding, compression rate, resolution, bitrate, frame rate, sample rate, and channels.</li>
+<li>GIF: Frame rate, frame size, maximum color count, dither algorithm, and loop mode.</li>
+</ul>
+<p><video src="./format-settings.mp4" width="720" height="480" controls="controls"></video></p>
+<p>Most dropdown options default to &ldquo;Keep same as source.&rdquo; During batch conversion, each file is processed based on its own source parameters, rather than applying the first file&rsquo;s parameters to all.</p>
+<p>The image size ratio can be adjusted via a slider from 0% to 200%, or by entering a larger value directly. When metadata is not kept, the output will remove additional information such as shooting time, camera model, and GPS.</p>
+<h2 id="remuxing-re-encoding-and-gpu-acceleration">Remuxing, Re-encoding, and GPU Acceleration
+</h2><p>Video conversion does not always mean re-compression. FormatConv detects video and audio stream encodings before conversion:</p>
+<ul>
+<li>If the target container supports both source streams and forced re-encoding is not enabled: Streams are copied and remuxed directly.</li>
+<li>If only one stream is incompatible: Only the incompatible stream is re-encoded.</li>
+<li>If the user enables forced video or audio re-encoding: The corresponding stream is processed according to the settings on the format card.</li>
+</ul>
+<p>Pure remuxing is fast, does not lose quality, and avoids abnormal size increases due to repeated encoding.</p>
+<p>When GPU acceleration is enabled, only tasks where video re-encoding actually occurs will attempt to use hardware encoders. The software detects NVIDIA NVENC, Intel QSV, and AMD AMF at runtime; if hardware encoding is unavailable or fails, it automatically falls back to CPU encoding.</p>
+<p>Media detection performs multiple attempts and provides alternative detection methods. If encoding information still cannot be confirmed, the software prioritizes safe stream copying or explicit failure, preventing FFmpeg from implicitly choosing an unexpected encoder.</p>
+<h2 id="audiovideo-separation">Audio/Video Separation
+</h2><p>When the file area contains video, the &ldquo;Separate/Merge&rdquo; section is displayed on the right.</p>
+<p>&ldquo;Audio/Video Separation&rdquo; allows you to choose to output video, audio, or both; at least one option must be kept. The separation process prioritizes stream copying without re-compressing the original streams.</p>
+<p>Audio will choose an appropriate container based on its encoding. After output is complete, the software also checks the duration of the source audio and the separated result:</p>
+<ol>
+<li>If the duration is normal, the result is kept directly.</li>
+<li>If the duration is abnormal, it first re-generates the timeline using the corresponding standard container.</li>
+<li>If it&rsquo;s still abnormal, it re-encapsulates using the MKA container.</li>
+<li>If it&rsquo;s still abnormal, it losslessly reconstructs a continuous audio timeline.</li>
+</ol>
+<p>Intermediate files with abnormalities are deleted, ensuring that obviously incorrect results are not left for the user.</p>
+<p><video src="./split-media.mp4" width="720" height="480" controls="controls"></video></p>
+<h2 id="audiovideo-merging">Audio/Video Merging
+</h2><p>&ldquo;Audio/Video Merging&rdquo; accepts exactly one video file and one audio file. After dragging files to the merge card, you can view and delete files in the import list in the settings.</p>
+<p>Merge settings include:</p>
+<ul>
+<li>Auto-merge</li>
+<li>Remove source video audio track</li>
+<li>Imported file list</li>
+</ul>
+<p>The output container maintains the source video format, and the video stream is prioritized for direct copying. The external audio will align with the video from timestamp 0: if the audio is too long, it&rsquo;s truncated at the end of the video; if it&rsquo;s too short, silence is added until the end of the video; if they are the same length, it ends normally.</p>
+<p>If &ldquo;Remove source video audio track&rdquo; is disabled, the output will keep the original audio track and add the external audio; if enabled, only the video stream and the new external audio are kept.</p>
+<p><video src="./merge-media.mp4" width="720" height="480" controls="controls"></video></p>
+<h2 id="conversion-progress-display">Conversion Progress Display
+</h2><p>Below the format selection area, there is a fixed conversion task floating window. Each time a conversion task starts, a new task card is added here.</p>
+<p>New tasks are inserted at the far left of the floating window, and existing tasks move to the right. The task card displays the name of the converted file and continuously estimates processing progress based on the output file size. The progress color fills from the bottom up, and a completion icon appears once finished. Completed task cards can be clicked to open the output file with the system&rsquo;s default application.</p>
+<p>When there are many conversion tasks, the task floating window supports horizontal scrolling for easy viewing of previous tasks.</p>
+<p>Tasks running for more than approximately 1.5 seconds will display a cancel button. Clicking it terminates the current conversion and attempts to delete the incomplete output file already generated.</p>
+<h2 id="viewing-results-and-history">Viewing Results and History
+</h2><p>In addition to &ldquo;Format Selection&rdquo; on the right, you can switch to &ldquo;Result Display.&rdquo;</p>
+<p>The result display is divided into two parts:</p>
+<ul>
+<li>Completed this time</li>
+<li>History</li>
+</ul>
+<p>Each result displays the source filename, converted filename, conversion duration, and operation time, and provides an &ldquo;Open with Default App&rdquo; button.</p>
+<p><video src="./results-history.mp4" width="720" height="480" controls="controls"></video></p>
+<p>History is saved permanently, making it easy to find previously converted files later. The &ldquo;Format Selection&rdquo; and &ldquo;Result Display&rdquo; are always switched manually by the user; the page does not jump automatically when a conversion starts or finishes.</p>
+<h2 id="settings">Settings
+</h2><p>FormatConv provides a complete settings dialog, including General, Preferences, Advanced, and About sections.</p>
+<p>General settings include:</p>
+<ul>
+<li>Default output directory</li>
+<li>Whether to ask for the save location before each conversion</li>
+<li>Naming rules after conversion</li>
+<li>Whether to overwrite source files</li>
+<li>Whether to enable GPU acceleration</li>
+</ul>
+<p>Preferences include:</p>
+<ul>
+<li>Language selection</li>
+<li>Light/Dark theme</li>
+<li>Main interface format display management</li>
+</ul>
+<p>Advanced settings default to only showing the developer mode switch. Enabling it requires a second confirmation, after which you can edit theme color JSON, card corner radii, and development/packaging icon paths. Incorrect theme configurations will not be applied directly, and if necessary, all settings can be reset in &ldquo;About.&rdquo;</p>
+<p><video src="./settings.mp4" width="720" height="480" controls="controls"></video></p>
+<p>The software supports switching between Chinese and English; the main interface and settings will update immediately after switching.</p>
+<h2 id="output-naming-rules">Output Naming Rules
+</h2><p>The software supports customizing the naming rules for converted files.</p>
+<p>The current naming format is:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">name[_$num]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Where <code>name</code> represents the source filename and cannot be modified. The input field must contain and only contain <code>$num</code> once.</p>
+<p>When the output file does not have a duplicate name, the software will directly use the original filename; when a duplicate name occurs, it will automatically append a number, for example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">video.mp4
+</span></span><span class="line"><span class="cl">video_1.mp4
+</span></span><span class="line"><span class="cl">video_2.mp4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This avoids accidentally overwriting existing files during batch conversion.</p>
+<h2 id="suitable-use-cases">Suitable Use Cases
+</h2><p>FormatConv is suitable for the following scenarios:</p>
+<ul>
+<li>Batch converting videos to MP4, MOV, GIF, and other formats.</li>
+<li>Converting audio to MP3, WAV, FLAC, and other formats.</li>
+<li>Compressing images or converting PNG, JPG, WEBP, and other formats.</li>
+<li>Directly extracting video or audio streams from long videos.</li>
+<li>Replacing or adding an external audio track to a video.</li>
+<li>Fast remuxing between compatible encodings to avoid repeated compression.</li>
+<li>Requiring local processing without uploading files to online tools.</li>
+<li>Needing a simple and intuitive Windows desktop conversion tool.</li>
+</ul>
+<h2 id="installation-and-usage">Installation and Usage
+</h2><p>After downloading the Windows installation package, install it normally. When downloading a new version of the installation package later, you can install it directly over the original directory without uninstalling the old version; it is recommended to exit the running software before upgrading.</p>
+<p>Once installed, open FormatConv directly:</p>
+<ol>
+<li>Drag in the files to be converted.</li>
+<li>After selecting files, click the right arrow on the target format, or drag them to the target format.</li>
+<li>Adjust format parameters as needed.</li>
+<li>Wait for the conversion to complete.</li>
+<li>Open the output file in the results page or task card.</li>
+</ol>
+<p>The beta version already bundles FFmpeg and ImageMagick, so regular users do not need to download and install these tools separately.</p>
+<h2 id="technical-implementation">Technical Implementation
+</h2><p>FormatConv consists of three parts:</p>
+<ul>
+<li><strong>Flutter</strong>: Responsible for the Windows desktop interface and interaction.</li>
+<li><strong>Go + FFI</strong>: Responsible for task scheduling, media detection, parameter generation, progress callbacks, and cancellation control.</li>
+<li><strong>FFmpeg / ImageMagick</strong>: Responsible for actual media and image processing.</li>
+</ul>
+<p>The release version places FFmpeg, FFprobe, and ImageMagick portable files into the <code>tools/</code> directory of the installation path. Video conversion also decides between stream copying or re-encoding based on a container compatibility table and automatically executes CPU fallback if hardware encoding fails.</p>
+<h2 id="third-party-component-description">Third-Party Component Description
+</h2><p>The source code of FormatConv itself uses the MIT license.</p>
+<p>Third-party components included in the Windows installation package include:</p>
+<ul>
+<li>FFmpeg: Used for video, audio conversion, and media detection; current gyan.dev builds are handled under GPLv3.</li>
+<li>ImageMagick: Used for image conversion, licensed separately by ImageMagick Studio LLC.</li>
+<li>MiSans: Used for interface font display, licensed separately by Xiaomi Communications Co., Ltd.</li>
+</ul>
+<p>These components are licensed separately by their respective projects or rightsholders and are not covered by FormatConv&rsquo;s MIT authorization. Corresponding third-party statements and license information are included in the installation package and project repository.</p>
+<p>If you encounter format compatibility, hardware encoding, or interface issues during use, you can provide feedback on <a class="link" href="https://github.com/domin1c86/formatConv/issues"  target="_blank" rel="noopener"
+    >GitHub Issues</a> or <a class="link" href="https://gitee.com/domin1c/format-conv/issues"  target="_blank" rel="noopener"
+    >Gitee Issues</a>. Providing the input format, target format, whether re-encoding is enabled, and the error message will make it easier to locate the problem.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/en/tags/format-conversion/">Format Conversion</a>
+        
+            <a href="/en/tags/windows/">Windows</a>
+        
+            <a href="/en/tags/flutter/">Flutter</a>
+        
+            <a href="/en/tags/ffmpeg/">FFmpeg</a>
+        
+            <a href="/en/tags/tools/">Tools</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Jun 19, 2026 00:00 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="domin1c86/domin1c86.github.io"
+        issue-term="pathname"
+        
+        label="Comment"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Domin1c - 岳昊达
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.33.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Follow Me Please😭 on Domin1c&#39;s Blog</title>
+        <link>https://domin1c86.github.io/en/categories/follow-me-please/</link>
+        <description>Recent content in Follow Me Please😭 on Domin1c&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Domin1c - 岳昊达</copyright>
+        <lastBuildDate>Fri, 19 Jun 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://domin1c86.github.io/en/categories/follow-me-please/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Format Converter</title>
+        <link>https://domin1c86.github.io/en/p/format-converter/</link>
+        <pubDate>Tue, 16 Jun 2026 22:46:38 +0800</pubDate>
+        
+        <guid>https://domin1c86.github.io/en/p/format-converter/</guid>
+        <description>&lt;h1 id=&#34;formatconv-a-local-format-conversion-tool-for-windows&#34;&gt;FormatConv: A Local Format Conversion Tool for Windows
+&lt;/h1&gt;&lt;p&gt;When organizing materials, processing videos, compressing images, or converting audio formats daily, we often encounter a problem: tools are too heavy, rely on online services, batch processing is troublesome, or require manual configuration of external tools like FFmpeg and ImageMagick.&lt;/p&gt;
+&lt;p&gt;FormatConv is a local format conversion software for Windows, primarily used for batch format conversion of videos, audio, and images, as well as the separation and merging of video and audio streams. It uses Flutter for the desktop interface, Go for the local conversion scheduling, and comes bundled with FFmpeg and ImageMagick in the beta version, so users don&amp;rsquo;t need to install additional command-line tools.&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./formatconv-main.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;download-links&#34;&gt;Download Links
+&lt;/h2&gt;&lt;p&gt;Click the link below to download the latest version:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/domin1c86/formatConv/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FormatConv Download Link - GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If the above link cannot be opened, please choose from the following:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/domin1c/format-conv/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FormatConv Download Link - Gitee&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1epKxhbuQC58n3FIucoYJqA?pwd=hjwq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FormatConv Download Link - Baidu Netdisk&lt;/a&gt;&lt;br&gt;
+For split compression, you need to download all the files and then decompress the file ending with &amp;ldquo;.001&amp;rdquo; to install normally.&lt;/p&gt;
+&lt;h2 id=&#34;core-features&#34;&gt;Core Features
+&lt;/h2&gt;&lt;p&gt;FormatConv currently supports local conversion of three types of files and one type of media stream operation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Video: such as MP4, MKV, MOV, AVI, GIF, etc.&lt;/li&gt;
+&lt;li&gt;Audio: such as MP3, FLAC, WAV, AAC, etc.&lt;/li&gt;
+&lt;li&gt;Image: such as PNG, JPEG, JPG, WEBP, BMP, TIFF, GIF, etc.&lt;/li&gt;
+&lt;li&gt;Separate/Merge: Extract video or audio streams from video, and merge a video with an external audio file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The software supports drag-and-drop file addition, batch selection, image and video preview, task cancellation, conversion history, opening output files with default applications, as well as bilingual support (Chinese/English) and Light/Dark themes.&lt;/p&gt;
+&lt;h2 id=&#34;local-conversion-independent-of-online-services&#34;&gt;Local Conversion, Independent of Online Services
+&lt;/h2&gt;&lt;p&gt;The conversion process of FormatConv is completed locally, with no need to upload files to a server. For video and audio, the software calls the bundled FFmpeg; for images, it calls the bundled ImageMagick.&lt;/p&gt;
+&lt;p&gt;This means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Large files don&amp;rsquo;t require upload waiting time&lt;/li&gt;
+&lt;li&gt;Materials are processed only locally&lt;/li&gt;
+&lt;li&gt;Can be used without an internet connection&lt;/li&gt;
+&lt;li&gt;Batch conversion is more stable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that FFmpeg and ImageMagick are third-party components with their own independent licenses. The source code of FormatConv itself uses the MIT license, but the third-party tools included in the installation package are not covered by FormatConv&amp;rsquo;s MIT authorization.&lt;/p&gt;
+&lt;h2 id=&#34;adding-files&#34;&gt;Adding Files
+&lt;/h2&gt;&lt;p&gt;After opening the software, the left side is the file workspace. You can add files in two ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the &amp;ldquo;Add Files&amp;rdquo; area to select local files.&lt;/li&gt;
+&lt;li&gt;Drag and drop files directly from File Explorer to the &amp;ldquo;Add Files&amp;rdquo; or &amp;ldquo;Added Files&amp;rdquo; area.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Added files will be displayed in the &amp;ldquo;Added Files&amp;rdquo; area. The software automatically identifies file types and filters them by &amp;ldquo;All, Video, Audio, Image.&amp;rdquo; Image cards show thumbnails, and video cards attempt to capture a frame as a preview; a preview failure will simply fall back to a type icon and does not affect conversion.&lt;/p&gt;
+&lt;p&gt;File cards support multi-selection. Click a card to select or deselect it; clicking in an empty area of the file section cancels all selections. Selected files can be dragged together to the format cards on the right for conversion; when hovering over a card, you can also use the delete button in the top right corner to remove the file from the workspace.&lt;/p&gt;
+&lt;p&gt;Files that have already been processed will not disappear immediately; instead, they move to the end of the list with a green status indicator, making it easy to continue processing other formats.&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./file-cards.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;choosing-output-formats&#34;&gt;Choosing Output Formats
+&lt;/h2&gt;&lt;p&gt;The right side is the format selection area. Formats are grouped by video, audio, and image, with each format card representing a target format.&lt;/p&gt;
+&lt;p&gt;The usage is straightforward:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Click the right arrow on a format card: Convert the currently selected matching files.&lt;/li&gt;
+&lt;li&gt;Drag a file card to a format card: Convert the dragged file.&lt;/li&gt;
+&lt;li&gt;Drag after multi-selection: Batch convert the selected matching files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The format name and empty areas of the card will not start a task, reducing accidental operations. The right arrow and settings button have independent hover effects, and only the right arrow is responsible for executing the conversion.&lt;/p&gt;
+&lt;p&gt;If the file type does not match, the software will automatically refuse the conversion. For example, audio files cannot be dragged onto video formats. GIF and video formats support mutual conversion, which is an exception rule.&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./convert-by-drag.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conversion-parameter-settings&#34;&gt;Conversion Parameter Settings
+&lt;/h2&gt;&lt;p&gt;Each format card has a settings button on the right. Clicking it allows you to adjust conversion parameters for that format.&lt;/p&gt;
+&lt;p&gt;Settings vary slightly by type:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Audio: Compression rate, audio bitrate, sample rate, number of channels.&lt;/li&gt;
+&lt;li&gt;Image: Compression rate, size ratio, color space, whether to keep metadata.&lt;/li&gt;
+&lt;li&gt;Video: Separately control whether video and audio streams are forced to re-encode, and set encoding, compression rate, resolution, bitrate, frame rate, sample rate, and channels.&lt;/li&gt;
+&lt;li&gt;GIF: Frame rate, frame size, maximum color count, dither algorithm, and loop mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;video src=&#34;./format-settings.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;Most dropdown options default to &amp;ldquo;Keep same as source.&amp;rdquo; During batch conversion, each file is processed based on its own source parameters, rather than applying the first file&amp;rsquo;s parameters to all.&lt;/p&gt;
+&lt;p&gt;The image size ratio can be adjusted via a slider from 0% to 200%, or by entering a larger value directly. When metadata is not kept, the output will remove additional information such as shooting time, camera model, and GPS.&lt;/p&gt;
+&lt;h2 id=&#34;remuxing-re-encoding-and-gpu-acceleration&#34;&gt;Remuxing, Re-encoding, and GPU Acceleration
+&lt;/h2&gt;&lt;p&gt;Video conversion does not always mean re-compression. FormatConv detects video and audio stream encodings before conversion:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the target container supports both source streams and forced re-encoding is not enabled: Streams are copied and remuxed directly.&lt;/li&gt;
+&lt;li&gt;If only one stream is incompatible: Only the incompatible stream is re-encoded.&lt;/li&gt;
+&lt;li&gt;If the user enables forced video or audio re-encoding: The corresponding stream is processed according to the settings on the format card.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pure remuxing is fast, does not lose quality, and avoids abnormal size increases due to repeated encoding.&lt;/p&gt;
+&lt;p&gt;When GPU acceleration is enabled, only tasks where video re-encoding actually occurs will attempt to use hardware encoders. The software detects NVIDIA NVENC, Intel QSV, and AMD AMF at runtime; if hardware encoding is unavailable or fails, it automatically falls back to CPU encoding.&lt;/p&gt;
+&lt;p&gt;Media detection performs multiple attempts and provides alternative detection methods. If encoding information still cannot be confirmed, the software prioritizes safe stream copying or explicit failure, preventing FFmpeg from implicitly choosing an unexpected encoder.&lt;/p&gt;
+&lt;h2 id=&#34;audiovideo-separation&#34;&gt;Audio/Video Separation
+&lt;/h2&gt;&lt;p&gt;When the file area contains video, the &amp;ldquo;Separate/Merge&amp;rdquo; section is displayed on the right.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Audio/Video Separation&amp;rdquo; allows you to choose to output video, audio, or both; at least one option must be kept. The separation process prioritizes stream copying without re-compressing the original streams.&lt;/p&gt;
+&lt;p&gt;Audio will choose an appropriate container based on its encoding. After output is complete, the software also checks the duration of the source audio and the separated result:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If the duration is normal, the result is kept directly.&lt;/li&gt;
+&lt;li&gt;If the duration is abnormal, it first re-generates the timeline using the corresponding standard container.&lt;/li&gt;
+&lt;li&gt;If it&amp;rsquo;s still abnormal, it re-encapsulates using the MKA container.&lt;/li&gt;
+&lt;li&gt;If it&amp;rsquo;s still abnormal, it losslessly reconstructs a continuous audio timeline.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Intermediate files with abnormalities are deleted, ensuring that obviously incorrect results are not left for the user.&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./split-media.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;audiovideo-merging&#34;&gt;Audio/Video Merging
+&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Audio/Video Merging&amp;rdquo; accepts exactly one video file and one audio file. After dragging files to the merge card, you can view and delete files in the import list in the settings.&lt;/p&gt;
+&lt;p&gt;Merge settings include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Auto-merge&lt;/li&gt;
+&lt;li&gt;Remove source video audio track&lt;/li&gt;
+&lt;li&gt;Imported file list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The output container maintains the source video format, and the video stream is prioritized for direct copying. The external audio will align with the video from timestamp 0: if the audio is too long, it&amp;rsquo;s truncated at the end of the video; if it&amp;rsquo;s too short, silence is added until the end of the video; if they are the same length, it ends normally.&lt;/p&gt;
+&lt;p&gt;If &amp;ldquo;Remove source video audio track&amp;rdquo; is disabled, the output will keep the original audio track and add the external audio; if enabled, only the video stream and the new external audio are kept.&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./merge-media.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conversion-progress-display&#34;&gt;Conversion Progress Display
+&lt;/h2&gt;&lt;p&gt;Below the format selection area, there is a fixed conversion task floating window. Each time a conversion task starts, a new task card is added here.&lt;/p&gt;
+&lt;p&gt;New tasks are inserted at the far left of the floating window, and existing tasks move to the right. The task card displays the name of the converted file and continuously estimates processing progress based on the output file size. The progress color fills from the bottom up, and a completion icon appears once finished. Completed task cards can be clicked to open the output file with the system&amp;rsquo;s default application.&lt;/p&gt;
+&lt;p&gt;When there are many conversion tasks, the task floating window supports horizontal scrolling for easy viewing of previous tasks.&lt;/p&gt;
+&lt;p&gt;Tasks running for more than approximately 1.5 seconds will display a cancel button. Clicking it terminates the current conversion and attempts to delete the incomplete output file already generated.&lt;/p&gt;
+&lt;h2 id=&#34;viewing-results-and-history&#34;&gt;Viewing Results and History
+&lt;/h2&gt;&lt;p&gt;In addition to &amp;ldquo;Format Selection&amp;rdquo; on the right, you can switch to &amp;ldquo;Result Display.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The result display is divided into two parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Completed this time&lt;/li&gt;
+&lt;li&gt;History&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each result displays the source filename, converted filename, conversion duration, and operation time, and provides an &amp;ldquo;Open with Default App&amp;rdquo; button.&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./results-history.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;History is saved permanently, making it easy to find previously converted files later. The &amp;ldquo;Format Selection&amp;rdquo; and &amp;ldquo;Result Display&amp;rdquo; are always switched manually by the user; the page does not jump automatically when a conversion starts or finishes.&lt;/p&gt;
+&lt;h2 id=&#34;settings&#34;&gt;Settings
+&lt;/h2&gt;&lt;p&gt;FormatConv provides a complete settings dialog, including General, Preferences, Advanced, and About sections.&lt;/p&gt;
+&lt;p&gt;General settings include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Default output directory&lt;/li&gt;
+&lt;li&gt;Whether to ask for the save location before each conversion&lt;/li&gt;
+&lt;li&gt;Naming rules after conversion&lt;/li&gt;
+&lt;li&gt;Whether to overwrite source files&lt;/li&gt;
+&lt;li&gt;Whether to enable GPU acceleration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Preferences include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Language selection&lt;/li&gt;
+&lt;li&gt;Light/Dark theme&lt;/li&gt;
+&lt;li&gt;Main interface format display management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Advanced settings default to only showing the developer mode switch. Enabling it requires a second confirmation, after which you can edit theme color JSON, card corner radii, and development/packaging icon paths. Incorrect theme configurations will not be applied directly, and if necessary, all settings can be reset in &amp;ldquo;About.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./settings.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;The software supports switching between Chinese and English; the main interface and settings will update immediately after switching.&lt;/p&gt;
+&lt;h2 id=&#34;output-naming-rules&#34;&gt;Output Naming Rules
+&lt;/h2&gt;&lt;p&gt;The software supports customizing the naming rules for converted files.&lt;/p&gt;
+&lt;p&gt;The current naming format is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name[_$num]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Where &lt;code&gt;name&lt;/code&gt; represents the source filename and cannot be modified. The input field must contain and only contain &lt;code&gt;$num&lt;/code&gt; once.&lt;/p&gt;
+&lt;p&gt;When the output file does not have a duplicate name, the software will directly use the original filename; when a duplicate name occurs, it will automatically append a number, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video_1.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video_2.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This avoids accidentally overwriting existing files during batch conversion.&lt;/p&gt;
+&lt;h2 id=&#34;suitable-use-cases&#34;&gt;Suitable Use Cases
+&lt;/h2&gt;&lt;p&gt;FormatConv is suitable for the following scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Batch converting videos to MP4, MOV, GIF, and other formats.&lt;/li&gt;
+&lt;li&gt;Converting audio to MP3, WAV, FLAC, and other formats.&lt;/li&gt;
+&lt;li&gt;Compressing images or converting PNG, JPG, WEBP, and other formats.&lt;/li&gt;
+&lt;li&gt;Directly extracting video or audio streams from long videos.&lt;/li&gt;
+&lt;li&gt;Replacing or adding an external audio track to a video.&lt;/li&gt;
+&lt;li&gt;Fast remuxing between compatible encodings to avoid repeated compression.&lt;/li&gt;
+&lt;li&gt;Requiring local processing without uploading files to online tools.&lt;/li&gt;
+&lt;li&gt;Needing a simple and intuitive Windows desktop conversion tool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation-and-usage&#34;&gt;Installation and Usage
+&lt;/h2&gt;&lt;p&gt;After downloading the Windows installation package, install it normally. When downloading a new version of the installation package later, you can install it directly over the original directory without uninstalling the old version; it is recommended to exit the running software before upgrading.&lt;/p&gt;
+&lt;p&gt;Once installed, open FormatConv directly:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Drag in the files to be converted.&lt;/li&gt;
+&lt;li&gt;After selecting files, click the right arrow on the target format, or drag them to the target format.&lt;/li&gt;
+&lt;li&gt;Adjust format parameters as needed.&lt;/li&gt;
+&lt;li&gt;Wait for the conversion to complete.&lt;/li&gt;
+&lt;li&gt;Open the output file in the results page or task card.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The beta version already bundles FFmpeg and ImageMagick, so regular users do not need to download and install these tools separately.&lt;/p&gt;
+&lt;h2 id=&#34;technical-implementation&#34;&gt;Technical Implementation
+&lt;/h2&gt;&lt;p&gt;FormatConv consists of three parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Flutter&lt;/strong&gt;: Responsible for the Windows desktop interface and interaction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go + FFI&lt;/strong&gt;: Responsible for task scheduling, media detection, parameter generation, progress callbacks, and cancellation control.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FFmpeg / ImageMagick&lt;/strong&gt;: Responsible for actual media and image processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The release version places FFmpeg, FFprobe, and ImageMagick portable files into the &lt;code&gt;tools/&lt;/code&gt; directory of the installation path. Video conversion also decides between stream copying or re-encoding based on a container compatibility table and automatically executes CPU fallback if hardware encoding fails.&lt;/p&gt;
+&lt;h2 id=&#34;third-party-component-description&#34;&gt;Third-Party Component Description
+&lt;/h2&gt;&lt;p&gt;The source code of FormatConv itself uses the MIT license.&lt;/p&gt;
+&lt;p&gt;Third-party components included in the Windows installation package include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FFmpeg: Used for video, audio conversion, and media detection; current gyan.dev builds are handled under GPLv3.&lt;/li&gt;
+&lt;li&gt;ImageMagick: Used for image conversion, licensed separately by ImageMagick Studio LLC.&lt;/li&gt;
+&lt;li&gt;MiSans: Used for interface font display, licensed separately by Xiaomi Communications Co., Ltd.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These components are licensed separately by their respective projects or rightsholders and are not covered by FormatConv&amp;rsquo;s MIT authorization. Corresponding third-party statements and license information are included in the installation package and project repository.&lt;/p&gt;
+&lt;p&gt;If you encounter format compatibility, hardware encoding, or interface issues during use, you can provide feedback on &lt;a class=&#34;link&#34; href=&#34;https://github.com/domin1c86/formatConv/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Issues&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/domin1c/format-conv/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gitee Issues&lt;/a&gt;. Providing the input format, target format, whether re-encoding is enabled, and the error message will make it easier to locate the problem.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

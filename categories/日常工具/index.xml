@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>日常工具 on Domin1c的博客</title>
+        <link>https://domin1c86.github.io/categories/%E6%97%A5%E5%B8%B8%E5%B7%A5%E5%85%B7/</link>
+        <description>Recent content in 日常工具 on Domin1c的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Domin1c - 岳昊达</copyright>
+        <lastBuildDate>Fri, 19 Jun 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://domin1c86.github.io/categories/%E6%97%A5%E5%B8%B8%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Format Converter</title>
+        <link>https://domin1c86.github.io/p/format-converter/</link>
+        <pubDate>Tue, 16 Jun 2026 22:46:38 +0800</pubDate>
+        
+        <guid>https://domin1c86.github.io/p/format-converter/</guid>
+        <description>&lt;h1 id=&#34;formatconv一个面向-windows-的本地格式转换工具&#34;&gt;FormatConv：一个面向 Windows 的本地格式转换工具
+&lt;/h1&gt;&lt;p&gt;在日常整理素材、处理视频、压缩图片或转换音频格式时，经常会遇到一个问题：工具太重、依赖在线服务、批量处理麻烦，或者需要手动配置 FFmpeg、ImageMagick 等外部工具。&lt;/p&gt;
+&lt;p&gt;FormatConv 是一个面向 Windows 的本地格式转换软件，主要用于视频、音频、图片的批量格式转换，以及视频流和音频流的分离、合并。它采用 Flutter 构建桌面界面，Go 负责本地转换调度，并随内测版打包 FFmpeg 与 ImageMagick，用户无需额外安装命令行工具。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./formatconv-main.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载链接&#34;&gt;下载链接
+&lt;/h2&gt;&lt;p&gt;点击下方链接下载最新版：&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/domin1c86/formatConv/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FormatConv 下载链接 - GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上面链接无法打开的情况下，选择下方即可：&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/domin1c/format-conv/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FormatConv 下载链接 - Gitee&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1epKxhbuQC58n3FIucoYJqA?pwd=hjwq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FormatConv 下载链接 - 百度网盘&lt;/a&gt;&lt;br&gt;
+分卷压缩需要把所有的文件都下载下来，然后解压“.001”结尾的文件即可正常安装。&lt;/p&gt;
+&lt;h2 id=&#34;核心功能&#34;&gt;核心功能
+&lt;/h2&gt;&lt;p&gt;FormatConv 当前支持三类文件的本地转换和一类媒体流操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;视频：如 MP4、MKV、MOV、AVI、GIF 等格式&lt;/li&gt;
+&lt;li&gt;音频：如 MP3、FLAC、WAV、AAC 等格式&lt;/li&gt;
+&lt;li&gt;图片：如 PNG、JPEG、JPG、WEBP、BMP、TIFF、GIF 等格式&lt;/li&gt;
+&lt;li&gt;分离/合并：从视频中提取视频流或音频流，以及将一个视频和一个外部音频合并&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件支持拖拽添加文件、批量选择、图片和视频预览、任务取消、转换历史记录、默认应用打开输出文件，以及中英文双语言和浅色/深色主题。&lt;/p&gt;
+&lt;h2 id=&#34;本地转换不依赖在线服务&#34;&gt;本地转换，不依赖在线服务
+&lt;/h2&gt;&lt;p&gt;FormatConv 的转换过程在本机完成，不需要上传文件到服务器。对于视频和音频，软件调用随包附带的 FFmpeg；对于图片，调用随包附带的 ImageMagick。&lt;/p&gt;
+&lt;p&gt;这意味着：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大文件不需要上传等待&lt;/li&gt;
+&lt;li&gt;素材仅会本地处理&lt;/li&gt;
+&lt;li&gt;没有网络时也可以使用&lt;/li&gt;
+&lt;li&gt;批量转换更稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要注意的是，FFmpeg 与 ImageMagick 是第三方组件，拥有各自独立的许可证。FormatConv 本身源码使用 MIT 协议，但随安装包附带的第三方工具不属于 FormatConv 的 MIT 授权范围。&lt;/p&gt;
+&lt;h2 id=&#34;添加文件&#34;&gt;添加文件
+&lt;/h2&gt;&lt;p&gt;打开软件后，左侧是文件工作区。你可以通过两种方式添加文件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击“添加文件”区域选择本地文件&lt;/li&gt;
+&lt;li&gt;直接从资源管理器拖拽文件到“添加文件”或“已添加文件”区域&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;添加后的文件会展示在“已添加文件”区域。软件会自动识别文件类型，并按“全部、视频、音频、图片”进行分类筛选。图片卡片会显示缩略图，视频卡片会尝试截取画面作为预览；预览失败只会回退为类型图标，不影响转换。&lt;/p&gt;
+&lt;p&gt;文件卡片支持多选。点击卡片即可选中或取消选中，在文件区空白位置点击可以取消全选。选中的文件可以一起拖拽到右侧格式卡片进行转换；鼠标停留在卡片上时，还可以通过右上角的删除按钮把文件移出工作区。&lt;/p&gt;
+&lt;p&gt;已经处理过的文件不会立即消失，而是排到列表后方并显示绿色状态标识，方便继续处理其他格式。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./file-cards.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;选择输出格式&#34;&gt;选择输出格式
+&lt;/h2&gt;&lt;p&gt;右侧是格式选择区。格式按照视频、音频、图片分组展示，每个格式卡片代表一种目标格式。&lt;/p&gt;
+&lt;p&gt;使用方式很直接：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击格式卡右箭头：转换当前选中的匹配文件&lt;/li&gt;
+&lt;li&gt;拖拽文件卡到格式卡：转换被拖拽的文件&lt;/li&gt;
+&lt;li&gt;多选后拖拽：批量转换选中的匹配文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;格式名称和卡片空白区域不会启动任务，可以减少误操作。右箭头与设置按钮拥有独立的待选中效果，只有右箭头负责执行转换。&lt;/p&gt;
+&lt;p&gt;如果文件类型不匹配，软件会自动拒绝转换。例如音频文件不能拖到视频格式上。GIF 与视频格式之间支持互转，这是一个例外规则。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./convert-by-drag.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;转换参数设置&#34;&gt;转换参数设置
+&lt;/h2&gt;&lt;p&gt;每个格式卡片右侧都有设置按钮。点击后可以针对该格式调整转换参数。&lt;/p&gt;
+&lt;p&gt;不同类型支持的设置略有区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;音频：压缩率、音频码率、采样率、声道数&lt;/li&gt;
+&lt;li&gt;图片：压缩率、尺寸比例、色彩空间、是否保留元数据&lt;/li&gt;
+&lt;li&gt;视频：分别控制视频流和音频流是否强制重新编码，并设置编码、压缩率、分辨率、码率、帧率、采样率和声道数&lt;/li&gt;
+&lt;li&gt;GIF：帧率、画面尺寸、最大颜色数、抖动算法和循环模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;video src=&#34;./format-settings.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;大多数下拉选项默认使用“与源保持相同”。批量转换时，每个文件会根据自己的源参数处理，而不是全部套用第一个文件的参数。&lt;/p&gt;
+&lt;p&gt;图片尺寸比例可以通过滑条在 0% 到 200% 范围内调整，也可以直接输入更大的数值。不保留元数据时，输出会移除拍摄时间、相机型号和 GPS 等附加信息。&lt;/p&gt;
+&lt;h2 id=&#34;重封装重新编码与-gpu-加速&#34;&gt;重封装、重新编码与 GPU 加速
+&lt;/h2&gt;&lt;p&gt;视频转换并不一定意味着重新压缩。FormatConv 会在转换前探测视频流和音频流编码：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目标容器同时支持两个源流，并且没有开启强制重编码：直接复制流并重封装。&lt;/li&gt;
+&lt;li&gt;只有某一路不兼容：只重新编码不兼容的流。&lt;/li&gt;
+&lt;li&gt;用户开启强制视频或音频重编码：按该格式卡片的设置处理对应流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;纯重封装速度快、不会损失质量，也不会因为重复编码导致体积异常增加。&lt;/p&gt;
+&lt;p&gt;开启 GPU 加速后，只有真正发生视频重编码的任务才会尝试使用硬件编码器。软件会运行时探测 NVIDIA NVENC、Intel QSV 和 AMD AMF；硬件编码不可用或执行失败时，会自动回退到 CPU 编码。&lt;/p&gt;
+&lt;p&gt;媒体探测会进行多次尝试，并提供备用探测方式。最终仍无法确认编码信息时，软件优先执行安全的流复制或明确失败，不会让 FFmpeg 隐式选择不可预期的编码器。&lt;/p&gt;
+&lt;h2 id=&#34;音视频分离&#34;&gt;音视频分离
+&lt;/h2&gt;&lt;p&gt;当文件区包含视频时，右侧会显示“分离/合并”板块。&lt;/p&gt;
+&lt;p&gt;“音视频分离”可以选择输出视频、音频，或者同时输出两者；两个选项至少会保留一个。分离过程优先使用流复制，不重新压缩原始流。&lt;/p&gt;
+&lt;p&gt;音频会根据编码选择合适的容器。输出完成后，软件还会检查源音频和分离结果的时长：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;时长正常，直接保留结果。&lt;/li&gt;
+&lt;li&gt;时长异常，先使用对应标准容器重新生成时间轴。&lt;/li&gt;
+&lt;li&gt;再次异常，改用 MKA 容器重新封装。&lt;/li&gt;
+&lt;li&gt;仍然异常时，无损重建连续音频时间轴。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;异常中间文件会被删除，不会把明显错误的结果留给用户。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./split-media.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;音视频合并&#34;&gt;音视频合并
+&lt;/h2&gt;&lt;p&gt;“音视频合并”接受且只接受一个视频文件和一个音频文件。把文件拖到合并卡片后，可以在设置中的导入列表查看和删除文件。&lt;/p&gt;
+&lt;p&gt;合并设置包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动合并&lt;/li&gt;
+&lt;li&gt;去除源视频音轨&lt;/li&gt;
+&lt;li&gt;已导入文件列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输出容器保持源视频格式，视频流优先直接复制。外部音频会从时间戳 0 与视频对齐：音频过长时在视频结束处截断，音频过短时补静音到视频结尾，两者等长时正常结束。&lt;/p&gt;
+&lt;p&gt;如果关闭“去除源视频音轨”，输出会保留原音轨并额外加入外部音频；开启后则只保留视频流和新的外部音频。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./merge-media.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;转换进度展示&#34;&gt;转换进度展示
+&lt;/h2&gt;&lt;p&gt;格式选择区域下方有一个固定的转换任务浮窗。每当开始一个转换任务，这里就会新增一个任务卡片。&lt;/p&gt;
+&lt;p&gt;新任务会插入浮窗最左侧，已有任务依次向右移动。任务卡片会显示转换后的文件名称，并根据输出文件大小持续估算处理进度。进度颜色从底部向上填充，转换完成后会显示完成标识。完成后的任务卡片可以点击，用系统默认应用打开输出文件。&lt;/p&gt;
+&lt;p&gt;当转换任务较多时，任务浮窗支持横向滚动，方便查看之前的任务。&lt;/p&gt;
+&lt;p&gt;运行超过约 1.5 秒的任务会显示取消按钮。点击后，软件会终止当前转换，并尝试删除已经生成的不完整输出文件。&lt;/p&gt;
+&lt;h2 id=&#34;查看转换结果和历史记录&#34;&gt;查看转换结果和历史记录
+&lt;/h2&gt;&lt;p&gt;右侧除了“格式选择”，还可以切换到“结果显示”。&lt;/p&gt;
+&lt;p&gt;结果显示分为两部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本次已完成&lt;/li&gt;
+&lt;li&gt;历史记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每条结果会展示源文件名、转换后的文件名、转换耗时、操作时间，并提供“默认应用打开”按钮。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./results-history.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;历史记录会持久保存，方便之后查找之前转换过的文件。“格式选择”和“结果显示”始终由用户手动切换，转换开始或完成时不会强制跳转页面。&lt;/p&gt;
+&lt;h2 id=&#34;设置项&#34;&gt;设置项
+&lt;/h2&gt;&lt;p&gt;FormatConv 提供了完整的设置弹窗，包含常规、偏好、高级和关于几个部分。&lt;/p&gt;
+&lt;p&gt;常规设置包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认输出目录&lt;/li&gt;
+&lt;li&gt;每次转换前是否询问保存地址&lt;/li&gt;
+&lt;li&gt;转换后命名规则&lt;/li&gt;
+&lt;li&gt;是否覆盖源文件&lt;/li&gt;
+&lt;li&gt;是否启用 GPU 加速&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;偏好设置包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语言选择&lt;/li&gt;
+&lt;li&gt;浅色 / 深色主题&lt;/li&gt;
+&lt;li&gt;主界面格式显示管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;高级设置默认只显示开发者模式开关。开启时需要二次确认，之后可以编辑主题颜色 JSON、卡片圆角和开发/打包图标路径。错误的主题配置不会直接应用，必要时可以在“关于”中重置所有设置。&lt;/p&gt;
+&lt;p&gt;&lt;video src=&#34;./settings.mp4&#34; width=&#34;720&#34; height=&#34;480&#34; controls=&#34;controls&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;软件支持中英文双语言切换，切换后主界面和设置界面会立即更新。&lt;/p&gt;
+&lt;h2 id=&#34;输出命名规则&#34;&gt;输出命名规则
+&lt;/h2&gt;&lt;p&gt;软件支持自定义转换后的文件命名规则。&lt;/p&gt;
+&lt;p&gt;当前命名方式为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name[_$num]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;name&lt;/code&gt; 代表源文件名，不可修改。输入框内必须包含且只能包含一次 $num。&lt;/p&gt;
+&lt;p&gt;当输出文件没有重名时，软件会直接使用原文件名；当发生重名时，会自动追加数字，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video_1.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;video_2.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样可以避免批量转换时意外覆盖已有文件。&lt;/p&gt;
+&lt;h2 id=&#34;适合哪些使用场景&#34;&gt;适合哪些使用场景
+&lt;/h2&gt;&lt;p&gt;FormatConv 适合以下场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;批量把视频转换为 MP4、MOV、GIF 等格式&lt;/li&gt;
+&lt;li&gt;把音频转换为 MP3、WAV、FLAC 等格式&lt;/li&gt;
+&lt;li&gt;压缩图片或转换 PNG、JPG、WEBP 等格式&lt;/li&gt;
+&lt;li&gt;从长视频中直接提取视频流或音频流&lt;/li&gt;
+&lt;li&gt;给视频替换或增加一个外部音轨&lt;/li&gt;
+&lt;li&gt;在兼容编码之间快速重封装，避免重复压缩&lt;/li&gt;
+&lt;li&gt;需要本地处理，不希望上传文件到在线工具&lt;/li&gt;
+&lt;li&gt;需要一个简单直观的 Windows 桌面转换工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装和使用&#34;&gt;安装和使用
+&lt;/h2&gt;&lt;p&gt;下载 Windows 安装包后，正常安装即可。后续下载新版安装包时，可以直接覆盖安装到原目录，不需要先卸载旧版本；升级前建议先退出正在运行的软件。&lt;/p&gt;
+&lt;p&gt;安装完成后，直接打开 FormatConv：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;拖入需要转换的文件&lt;/li&gt;
+&lt;li&gt;选择文件后点击目标格式右箭头，或拖拽到目标格式&lt;/li&gt;
+&lt;li&gt;根据需要调整格式参数&lt;/li&gt;
+&lt;li&gt;等待转换完成&lt;/li&gt;
+&lt;li&gt;在结果页或任务卡片中打开输出文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;内测版本已经随软件打包 FFmpeg 和 ImageMagick，因此普通用户不需要单独下载安装这些工具。&lt;/p&gt;
+&lt;h2 id=&#34;技术实现&#34;&gt;技术实现
+&lt;/h2&gt;&lt;p&gt;FormatConv 由三部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Flutter&lt;/strong&gt;：负责 Windows 桌面界面和交互。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go + FFI&lt;/strong&gt;：负责任务调度、媒体探测、参数生成、进度回调和取消控制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FFmpeg / ImageMagick&lt;/strong&gt;：负责实际的媒体与图片处理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;发布版会将 FFmpeg、FFprobe 和 ImageMagick portable 文件放入安装目录的 &lt;code&gt;tools/&lt;/code&gt; 中。视频转换还会根据容器兼容表决定流复制或重新编码，并在硬件编码失败时自动执行 CPU 回退。&lt;/p&gt;
+&lt;h2 id=&#34;第三方组件说明&#34;&gt;第三方组件说明
+&lt;/h2&gt;&lt;p&gt;FormatConv 本体源码使用 MIT 协议。&lt;/p&gt;
+&lt;p&gt;Windows 安装包中随附的第三方组件包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FFmpeg：用于视频、音频转换和媒体探测；当前 gyan.dev 构建按 GPLv3 处理&lt;/li&gt;
+&lt;li&gt;ImageMagick：用于图片转换，由 ImageMagick Studio LLC 单独授权&lt;/li&gt;
+&lt;li&gt;MiSans：用于界面字体显示，由小米科技有限责任公司单独授权&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些组件由各自项目或权利方单独授权，不属于 FormatConv 的 MIT 授权范围。安装包和项目仓库中会附带对应的第三方声明和许可证信息。&lt;/p&gt;
+&lt;p&gt;如果在使用中遇到格式兼容、硬件编码或界面问题，可以前往 &lt;a class=&#34;link&#34; href=&#34;https://github.com/domin1c86/formatConv/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Issues&lt;/a&gt; 或 &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/domin1c/format-conv/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gitee Issues&lt;/a&gt; 反馈。提供输入格式、目标格式、是否开启重编码以及错误信息，会更容易定位问题。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

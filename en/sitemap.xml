@@ -1,10 +1,9 @@
-
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://domin1c86.github.io/en/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,6 +18,127 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://domin1c86.github.io/zh-tw/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/categories/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://domin1c86.github.io/zh-tw/categories/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/categories/daily-tools/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://domin1c86.github.io/en/tags/ffmpeg/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/tags/ffmpeg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/tags/ffmpeg/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/tags/flutter/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/tags/flutter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/tags/flutter/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/categories/follow-me-please/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://domin1c86.github.io/en/tags/format-conversion/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://domin1c86.github.io/en/p/format-converter/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/p/format-converter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/p/format-converter/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/categories/my-software/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://domin1c86.github.io/en/post/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://domin1c86.github.io/zh-tw/post/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/tags/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://domin1c86.github.io/zh-tw/tags/"
+                />
+  </url><url>
+    <loc>https://domin1c86.github.io/en/tags/tools/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://domin1c86.github.io/en/tags/windows/</loc>
+    <lastmod>2026-06-19T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://domin1c86.github.io/en/tags/windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://domin1c86.github.io/tags/windows/"
                 />
   </url><url>
     <loc>https://domin1c86.github.io/en/archives/</loc>
@@ -75,23 +195,6 @@
                 href="https://domin1c86.github.io/zh-tw/%E9%97%9C%E6%96%BC/"
                 />
   </url><url>
-    <loc>https://domin1c86.github.io/en/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://domin1c86.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://domin1c86.github.io/zh-tw/categories/"
-                />
-  </url><url>
     <loc>https://domin1c86.github.io/en/links/</loc>
     <xhtml:link
                 rel="alternate"
@@ -124,23 +227,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://domin1c86.github.io/search/"
-                />
-  </url><url>
-    <loc>https://domin1c86.github.io/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://domin1c86.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://domin1c86.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://domin1c86.github.io/zh-tw/tags/"
                 />
   </url>
 </urlset>
